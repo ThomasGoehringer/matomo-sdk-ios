@@ -38,6 +38,7 @@ fileprivate extension Event {
     var queryItems: [URLQueryItem] {
         get {
             let lastOrderTimestamp = orderLastDate != nil ? "\(Int(orderLastDate!.timeIntervalSince1970))" : nil
+            
             let items = [
                 URLQueryItem(name: "idsite", value: siteId),
                 URLQueryItem(name: "rec", value: "1"),
